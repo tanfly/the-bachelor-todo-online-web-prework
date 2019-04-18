@@ -14,5 +14,5 @@ def get_contestant_name(data, occupation)
   data.each do |season_num, contestants|
     contestants.each do |contestants_hash|
       if contestants_hash["occupation"] == occupation
-        return cont
+        return contestants_hash["name"]
 end
