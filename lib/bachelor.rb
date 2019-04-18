@@ -3,7 +3,7 @@ data.each do |season, contestants|
     contestants.each do |stats|
       stats.each do |key, value|
         if value == "Winner"
-          return stats[:name].split[0]
+          return stats[:name]
         end
       end 
     end
