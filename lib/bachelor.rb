@@ -15,4 +15,7 @@ def get_contestant_name(data, occupation)
     contestants.each do |contestants_hash|
       if contestants_hash["occupation"] == occupation
         return contestants_hash["name"]
+      end
+    end
+  end
 end
