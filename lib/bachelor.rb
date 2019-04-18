@@ -1,14 +1,13 @@
 def get_first_name_of_season_winner(data, season)
-winner = nil 
-puts "#{data}"
-  data.collect do |seasons, info|
-    if seasons == season.to_sym
-      info.collect do |contestant|
-        if contestant[:status] == "Winner"
-          winner = contestant[:name].split[0]
+winner= " "
+
+  data.each do |season_num, info|
+    if season_num == season.to_sym
+      info.each do |contestant|
+        if contestant.values.last == "Winner"
+          winner = contestant.values.first
         end 
       end 
-    end 
-  end 
-winner 
-end
+    end
+  end
+winner.split.shift
