@@ -11,3 +11,4 @@ winner= " "
     end
   end
 winner.split.shift
+end
