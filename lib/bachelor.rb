@@ -1,5 +1,5 @@
 def get_first_name_of_season_winner(data, season)
-  data.each do |seasons, contestant_info|
+  data.collect do |seasons, contestant_info|
   if seasons == season.to_sym
     contestant_info.each do |stats_type, stats_data|
       if stats_data == "Winner"
