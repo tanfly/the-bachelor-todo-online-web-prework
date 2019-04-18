@@ -55,4 +55,3 @@ end
 average_age = total_age.to_f / num_of_contestants.to_f
 average_age.round
 end
-end
