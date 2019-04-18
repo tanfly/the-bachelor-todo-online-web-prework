@@ -1,7 +1,7 @@
 def get_first_name_of_season_winner(data, season)
   data.collect do |seasons, contestant_info|
   if seasons == season.to_sym
-    contestant_info.each do |stats_type, stats_data|
+    contestant_info.collect do |stats_type, stats_data|
       if stats_data == "Winner"
         stats_data[:name].split[0]
       end
